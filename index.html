@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="calculator-card">
+    <header class="calculator-header">
+      <span class="app-title">Calculator</span>
+      <button id="themeToggleBtn" class="icon-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </header>
+
+    <div class="display-container">
+      <div id="previousOperand" class="previous-operand"></div>
+      <div id="currentOperand" class="current-operand">0</div>
+    </div>
+
+    <div class="keypad">
+      <!-- Row 1 -->
+      <button class="btn btn-action" data-action="clear">AC</button>
+      <button class="btn btn-action" data-action="delete">DEL</button>
+      <button class="btn btn-action" data-action="percent">%</button>
+      <button class="btn btn-operator" data-operator="/">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn btn-number" data-number="7">7</button>
+      <button class="btn btn-number" data-number="8">8</button>
+      <button class="btn btn-number" data-number="9">9</button>
+      <button class="btn btn-operator" data-operator="*">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn btn-number" data-number="4">4</button>
+      <button class="btn btn-number" data-number="5">5</button>
+      <button class="btn btn-number" data-number="6">6</button>
+      <button class="btn btn-operator" data-operator="-">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn btn-number" data-number="1">1</button>
+      <button class="btn btn-number" data-number="2">2</button>
+      <button class="btn btn-number" data-number="3">3</button>
+      <button class="btn btn-operator" data-operator="+">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn btn-action" data-action="toggle-sign">±</button>
+      <button class="btn btn-number" data-number="0">0</button>
+      <button class="btn btn-number" data-number=".">.</button>
+      <button class="btn btn-equals" data-action="equals">=</button>
+    </div>
+
+    <!-- History Panel toggle -->
+    <details class="history-accordion">
+      <summary class="history-summary">
+        <span>Calculation History</span>
+        <button id="clearHistoryBtn" class="clear-history-btn" type="button">Clear</button>
+      </summary>
+      <div id="historyList" class="history-list">
+        <div class="empty-history">No calculations yet</div>
+      </div>
+    </details>
+  </div>
+
+  <script src="calculator.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

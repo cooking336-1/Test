@@ -1,0 +1,18 @@
+{
+  "name": "simple-calculator-js",
+  "version": "1.0.0",
+  "description": "A clean, modern calculator application written in JavaScript with web UI and CLI interface.",
+  "main": "calculator.js",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node --test test.js"
+  },
+  "keywords": [
+    "calculator",
+    "javascript",
+    "math",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT"
+}
